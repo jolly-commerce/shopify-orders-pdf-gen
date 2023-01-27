@@ -30,6 +30,6 @@ export const handler: Handler = async (event, context) => {
    headers: {
      'Content-Type': 'application/pdf',
    },
-   body: doc,
+   body: JSON.stringify(doc),
  };
 }
