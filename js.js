@@ -1,7 +1,7 @@
 // Handle form submission
 const form = document.getElementById("upload-form");
 function getCountryFromCode(code) {
-  return code == "FR" ? "France" : code;
+  return code == "FR" ? "France" : code == "BE" ? "Belgique" : code;
 }
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
@@ -61,6 +61,9 @@ async function pdfBuild(_data) {
 
         },
       ],
+      styles: {
+        atata: { margin: [20, 0, 0, 10] },
+      }
     };
 
     const data = _data.filter(function (d) {
@@ -85,7 +88,7 @@ async function pdfBuild(_data) {
           data[i + j]["Shipping Province"]
         }
         \n ${getCountryFromCode(data[i + j]["Shipping Country"])}`;
-        row.push({ text: address });
+        row.push({ text: address, style:"atata" });
       }
 
       docDefinition.content[0].table.body.push(row);
