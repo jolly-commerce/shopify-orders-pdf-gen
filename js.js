@@ -49,10 +49,10 @@ async function pdfBuild(_data) {
               return null;
             },
             hLineWidth: function (i, node) {
-              return 1;
+              return 0;
             },
             vLineWidth: function (i, node) {
-              return 1;
+              return 0;
             },
             cellHeight: 96,
           },
