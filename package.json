@@ -14,9 +14,10 @@
   "author": "Netlify",
   "license": "MIT",
   "dependencies": {
-    "@netlify/functions": "^1.0.0",
-    "@types/node": "^14.0.0",
+    "@netlify/functions": "^1.4.0",
+    "@types/node": "^18.11.18",
     "pdfkit": "^0.13.0",
+    "pdfmake": "^0.2.7",
     "typescript": "^4.0.0"
   },
   "devDependencies": {
